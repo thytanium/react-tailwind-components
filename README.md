@@ -1,2 +1,2 @@
-# react-tailwind-components
+# ⚛️ react-tailwind-components
 TailwindCSS components built for React
