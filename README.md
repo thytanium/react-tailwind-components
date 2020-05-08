@@ -1,2 +1,2 @@
 # ⚛️ react-tailwindcss-components
-TailwindCSS components built for React
+Common UI Components for React made with TailwindCSS
