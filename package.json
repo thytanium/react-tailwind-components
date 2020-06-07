@@ -4,8 +4,8 @@
   "description": "Common UI Components for React made with TailwindCSS",
   "main": "dist/index.js",
   "scripts": {
-		"build": "babel src --out-dir dist --ignore \"src/**/*.test.jsx\"",
-		"watch": "npm run build -- --watch",
+    "build": "babel src --out-dir dist --ignore \"src/**/*.test.jsx\"",
+    "watch": "npm run build -- --watch",
     "test": "jest"
   },
   "repository": {
