@@ -1,0 +1,40 @@
+{
+  "name": "@thytanium/react-tailwindcss",
+  "version": "0.1.0",
+  "description": "Common UI Components for React made with TailwindCSS",
+  "main": "dist/index.js",
+  "scripts": {
+		"build": "babel src --out-dir dist --ignore \"src/**/*.test.jsx\"",
+		"watch": "npm run build -- --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thytanium/react-tailwindcss.git"
+  },
+  "keywords": [
+    "react",
+    "tailwindcss"
+  ],
+  "author": "Alejandro González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thytanium/react-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/thytanium/react-tailwindcss#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.1",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
