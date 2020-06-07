@@ -6,6 +6,8 @@
   "scripts": {
     "build": "babel src --out-dir dist --ignore \"src/**/*.test.jsx\"",
     "watch": "npm run build -- --watch",
+    "lint": "eslint src --ext js --ext jsx",
+    "style": "prettier --write src",
     "test": "jest"
   },
   "repository": {
@@ -22,8 +24,8 @@
     "url": "https://github.com/thytanium/react-tailwindcss/issues"
   },
   "homepage": "https://github.com/thytanium/react-tailwindcss#readme",
-  "dependencies": {
-    "prop-types": "^15.7.2"
+  "peerDependencies": {
+    "tailwindcss": ">=1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -33,7 +35,14 @@
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
     "babel-jest": "^26.0.1",
+    "eslint": "^7.2.0",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
