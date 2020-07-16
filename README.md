@@ -10,5 +10,6 @@ Common UI Components for React made with TailwindCSS
 - [ ] Dropdown
 - [ ] Autocomplete
 - [ ] Navbar
-- [ ] Sidebar
+- [ ] Sidenav
 - [ ] App Layout
+- [ ] Side Sheet
