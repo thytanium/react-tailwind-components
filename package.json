@@ -1,6 +1,6 @@
 {
   "name": "@thytanium/react-tailwindcss",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Common UI Components for React made with TailwindCSS",
   "main": "dist/index.js",
   "scripts": {
