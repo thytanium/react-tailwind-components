@@ -1,5 +1,5 @@
 # ⚛️ react-tailwindcss
-Common UI Components for React made with TailwindCSS
+Common UI Components for [React](https://reactjs.org) on top of [TailwindCSS](https://tailwindcss.com)
 
 ## Roadmap
 
