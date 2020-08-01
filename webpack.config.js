@@ -1,19 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'example/index.jsx'),
+  entry: path.resolve(__dirname, 'src/demo/index.tsx'),
   output: {
-    path: path.resolve(__dirname, 'example/dist'),
     filename: 'index.js',
+    publicPath: '/static/',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        use: ['babel-loader', 'eslint-loader'],
+        test: /\.tsx?$/,
+        use: ['ts-loader', 'eslint-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -22,8 +23,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'example/public'),
-    publicPath: '/static/',
+    contentBase: path.resolve(__dirname, 'src/demo/public'),
     inline: true,
     hot: true,
   },

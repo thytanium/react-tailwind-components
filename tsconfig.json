@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./types",
+    "sourceMap": true,
+    "removeComments": true
+  },
+  "include": [
+    "src/**/*",
+    "jest.setup.ts",
+    "typings.d.ts"
+  ]
+}
