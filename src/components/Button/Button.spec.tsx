@@ -6,16 +6,10 @@ describe('Button', () => {
   const buttonText = 'Button Test Text';
 
   it('renders properly', () => {
-    ['solid', 'outline'].forEach((scheme: Scheme) => {
-      ['primary', 'secondary'].forEach((variant: Variant) => {
-        const text = `${buttonText} ${scheme} ${variant}`;
-        const { getByText } = render(
-          <Button scheme={scheme} variant={variant}>
-            {text}
-          </Button>
-        );
-        expect(getByText(text)).toBeInTheDocument();
-      });
+    ['solid', 'outline'].forEach((variant: ButtonVariant) => {
+      const text = `${buttonText} ${variant}`;
+      const { getByText } = render(<Button variant={variant}>{text}</Button>);
+      expect(getByText(text)).toBeInTheDocument();
     });
   });
 

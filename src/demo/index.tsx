@@ -6,10 +6,9 @@ import { Button } from '..';
 
 const App = () => (
   <ThemeContext.Provider value={{ theme: 'light' }}>
-    <div className="p-4">
-      <Button scheme="solid" variant="secondary">
-        Hello
-      </Button>
+    <div className="p-4 space-x-4">
+      <Button variant="solid">Button</Button>
+      <Button variant="outline">Button</Button>
     </div>
   </ThemeContext.Provider>
 );
