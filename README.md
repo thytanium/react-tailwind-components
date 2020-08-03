@@ -1,5 +1,7 @@
 # ⚛️ react-tailwind-components
-Common UI Components for [React](https://reactjs.org) on top of [Tailwind CSS](https://tailwindcss.com)
+
+A set of reusable [React](https://reactjs.org) components built on top of
+[Tailwind CSS](https://tailwindcss.com)
 
 ## Roadmap
 
