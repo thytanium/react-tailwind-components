@@ -1,0 +1,9 @@
+export { default as TextXs } from './TextXs';
+export { default as TextSm } from './TextSm';
+export { default as TextBase } from './TextBase';
+export { default as TextLg } from './TextLg';
+export { default as TextXl } from './TextXl';
+export { default as Text2Xl } from './Text2Xl';
+export { default as Text3Xl } from './Text3Xl';
+export { default as Text4Xl } from './Text4Xl';
+export { default as Text5Xl } from './Text5Xl';

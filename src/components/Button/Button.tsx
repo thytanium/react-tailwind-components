@@ -1,45 +1,48 @@
 import * as React from 'react';
-import * as cn from 'classnames';
-import { button } from '../../classes';
+import * as classnames from 'classnames';
+import { Button as BaseButton, ButtonProps as BaseButtonProps } from '../../rc';
+import { variantMap } from '../../mappings';
+import { Variant } from '../../types';
 
 interface ButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-  isDisabled?: boolean;
-  onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
-  type?: 'button' | 'submit';
-  variant?: ButtonVariant;
+  variant?: Variant;
 }
 
-const Button = ({
+export default function Button({
   children,
-  className,
+  innerRef,
   isDisabled,
+  leftComponent,
+  leftNode,
   onClick,
+  rightComponent,
+  rightNode,
   type,
   variant,
-}: ButtonProps): React.ReactElement => {
+}: ButtonProps & BaseButtonProps): React.ReactElement {
   return (
-    <button
-      type={type}
+    <BaseButton
+      className={classnames('btn', variantMap[variant])}
+      innerRef={innerRef}
+      isDisabled={isDisabled}
+      leftComponent={leftComponent}
+      leftNode={leftNode}
       onClick={onClick}
-      disabled={isDisabled}
-      className={cn(button(variant), className)}
+      rightComponent={rightComponent}
+      rightNode={rightNode}
+      type={type}
     >
       {children}
-    </button>
+    </BaseButton>
   );
-};
+}
 
 Button.defaultProps = {
   children: undefined,
-  className: undefined,
   isDisabled: false,
   onClick: (): void => {
     // do nothing
   },
   type: 'button',
-  variant: 'solid',
 };
-
-export default Button;
+Button.variant = Variant;

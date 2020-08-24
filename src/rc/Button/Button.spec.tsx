@@ -5,12 +5,21 @@ import Button from './Button';
 describe('Button', () => {
   const buttonText = 'Button Test Text';
 
-  it('renders properly', () => {
-    ['solid', 'outline'].forEach((variant: ButtonVariant) => {
-      const text = `${buttonText} ${variant}`;
-      const { getByText } = render(<Button variant={variant}>{text}</Button>);
-      expect(getByText(text)).toBeInTheDocument();
-    });
+  it('renders a side component', () => {
+    const SideComponent = (): React.ReactElement => <span>Side</span>;
+    const { getByText } = render(
+      <Button leftComponent={SideComponent}>{buttonText}</Button>
+    );
+
+    expect(getByText('Side')).toBeInTheDocument();
+  });
+
+  it('renders a side node', () => {
+    const { getByText } = render(
+      <Button leftNode={<span>Side</span>}>{buttonText}</Button>
+    );
+
+    expect(getByText('Side')).toBeInTheDocument();
   });
 
   it('handles click event', () => {

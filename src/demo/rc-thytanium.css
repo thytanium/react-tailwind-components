@@ -1,0 +1,91 @@
+@tailwind base;
+
+@tailwind components;
+
+.text-light {
+  @apply text-gray-300;
+}
+.text-dark {
+  @apply text-gray-700;
+}
+.btn {
+  @apply px-4 py-2 inline-flex;
+}
+.btn > * + * {
+  @apply ml-2;
+}
+.btn:disabled {
+  @apply text-gray-400 cursor-not-allowed;
+}
+.is-primary {
+  @apply bg-blue-500 text-white;
+}
+.btn.is-primary:hover {
+  @apply bg-blue-600;
+}
+.btn.is-primary:disabled {
+  @apply bg-blue-300 text-blue-200;
+}
+.is-light {
+  @apply bg-gray-200 text-black;
+}
+.btn.is-light:hover {
+  @apply bg-gray-300;
+}
+.btn.is-light:disabled {
+  @apply bg-gray-200;
+}
+.is-dark {
+  @apply bg-gray-700 text-white;
+}
+.btn.is-dark:hover {
+  @apply bg-gray-800;
+}
+.btn.is-dark:disabled {
+  @apply bg-gray-500;
+}
+.is-success {
+  @apply bg-green-500 text-white;
+}
+.btn.is-success:hover {
+  @apply bg-green-600;
+}
+.btn.is-success:disabled {
+  @apply bg-green-300 text-green-200;
+}
+.is-warning {
+  @apply bg-yellow-500 text-black;
+}
+.btn.is-warning:hover {
+  @apply bg-yellow-600;
+}
+.btn.is-warning:disabled {
+  @apply bg-yellow-300 text-yellow-500;
+}
+.is-danger {
+  @apply bg-red-500 text-white;
+}
+.btn.is-danger:hover {
+  @apply bg-red-600;
+}
+.btn.is-danger:disabled {
+  @apply bg-red-300 text-red-200;
+}
+.overlay {
+  @apply w-screen h-screen fixed left-0 top-0 flex justify-center items-center;
+  background-color: rgba(128, 128, 128, 0.7);
+}
+.box {
+  @apply p-4;
+}
+.box-x {
+  @apply px-4;
+}
+.box-y {
+  @apply py-4;
+}
+.modal-body {
+  @apply bg-white shadow-lg;
+}
+
+@tailwind utilities;
