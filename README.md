@@ -7,9 +7,9 @@ A set of reusable [React](https://reactjs.org) components built on top of
 
 ### Components
 
-- [ ] Theme Context
-- [ ] Button
-- [ ] Overlay
+- [x] Theme Context
+- [x] Button
+- [x] Overlay
 - [ ] Modal
 - [ ] Dropdown
 - [ ] Navbar
