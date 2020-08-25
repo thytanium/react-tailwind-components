@@ -4,7 +4,7 @@ import Modal from './Modal';
 
 describe('Modal', () => {
   it('renders properly', () => {
-    const { getByText } = render(<Modal />);
+    const { getByText } = render(<Modal>Hola</Modal>);
     expect(getByText('Hola')).toBeInTheDocument();
   });
 });

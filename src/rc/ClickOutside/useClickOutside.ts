@@ -11,7 +11,7 @@ export default function useClickOutside<T extends HTMLElement>(
         onClick();
       }
     },
-    [ref]
+    [ref, onClick]
   );
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function useClickOutside<T extends HTMLElement>(
     return (): void => {
       window.removeEventListener('click', handleClick);
     };
-  }, []);
+  }, [handleClick]);
 
   return ref;
 }

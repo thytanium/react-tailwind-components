@@ -1,18 +1,24 @@
 import * as React from 'react';
-import { StackContextType, StackContext } from './Context';
+import StackContext from './StackContext';
 
 interface StackProps {
-  children: (current: StackContextType) => React.ReactNode;
+  children: (zIndex: number) => React.ReactNode;
+  value?: number;
 }
 
-export default function Stack({ children }: StackProps): React.ReactElement {
-  const current = React.useContext(StackContext);
-  const next = {
-    ...current,
-    zIndex: current.zIndex + 10,
-  } as StackContextType;
+export default function Stack({
+  children,
+  value,
+}: StackProps): React.ReactElement {
+  const previous = React.useContext(StackContext);
+  const current = Math.max(previous, value);
+  const next = current + 1;
 
   return (
     <StackContext.Provider value={next}>{children(next)}</StackContext.Provider>
   );
 }
+
+Stack.defaultProps = {
+  value: 0,
+};

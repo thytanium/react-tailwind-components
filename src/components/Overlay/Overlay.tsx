@@ -11,9 +11,9 @@ export default function Overlay({
   return (
     <Stack>
       {React.useCallback(
-        ({ zIndex }) =>
+        zIndex =>
           ReactDOM.createPortal(
-            <div className={classnames('overlay', zIndexMap[zIndex])}>
+            <div className={classnames('overlay', zIndexMap[zIndex * 10])}>
               {children}
             </div>,
             document.body
