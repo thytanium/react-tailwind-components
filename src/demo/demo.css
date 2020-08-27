@@ -27,7 +27,7 @@
   @apply bg-red-500 text-white;
 }
 .btn {
-  @apply px-4 py-2 inline-flex;
+  @apply px-4 py-2 inline-flex items-center align-top;
 }
 .btn > * + * {
   @apply ml-2;

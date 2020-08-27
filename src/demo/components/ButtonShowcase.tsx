@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Trash, Check, RefreshCw, ChevronDown } from 'react-feather';
 import { Box, Button, Container, Text5Xl } from '../..';
 import Text from '../../components/Text/Text';
+import { Check, ChevronDown, Trash, Refresh } from './Icon';
 
 export default function ButtonShowcase(): React.ReactElement {
   return (
@@ -16,7 +16,7 @@ export default function ButtonShowcase(): React.ReactElement {
         </Container>
       </div>
       <Container>
-        <div className="p-4 space-x-4">
+        <Box type={Box.type.Y}>
           <Button>Default</Button>
           <Button variant={Button.variant.PRIMARY}>Primary</Button>
           <Button variant={Button.variant.LIGHT}>Light</Button>
@@ -24,8 +24,8 @@ export default function ButtonShowcase(): React.ReactElement {
           <Button variant={Button.variant.SUCCESS}>Success</Button>
           <Button variant={Button.variant.WARNING}>Warning</Button>
           <Button variant={Button.variant.DANGER}>Danger</Button>
-        </div>
-        <div className="p-4 space-x-4">
+        </Box>
+        <Box type={Box.type.Y}>
           <Button isDisabled>Default</Button>
           <Button isDisabled variant={Button.variant.PRIMARY}>
             Primary
@@ -45,8 +45,8 @@ export default function ButtonShowcase(): React.ReactElement {
           <Button isDisabled variant={Button.variant.DANGER}>
             Danger
           </Button>
-        </div>
-        <div className="p-4 space-x-4 flex">
+        </Box>
+        <Box type={Box.type.Y}>
           <Button leftComponent={Check}>
             <span>Default</span>
           </Button>
@@ -56,8 +56,8 @@ export default function ButtonShowcase(): React.ReactElement {
           <Button leftComponent={Trash} variant={Button.variant.DANGER}>
             <span>Danger</span>
           </Button>
-          <Button leftComponent={RefreshCw} variant={Button.variant.WARNING} />
-        </div>
+          <Button leftComponent={Refresh} variant={Button.variant.WARNING} />
+        </Box>
       </Container>
     </div>
   );

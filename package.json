@@ -52,7 +52,6 @@
     "pretty-quick": "^2.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-feather": "^2.0.8",
     "style-loader": "^1.2.1",
     "tailwindcss": "^1.7.3",
     "ts-jest": "^26.1.4",
