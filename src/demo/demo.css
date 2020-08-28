@@ -75,14 +75,17 @@
   @apply w-screen h-screen fixed left-0 top-0;
   background-color: rgba(32, 32, 32, 0.7);
 }
-.box {
-  @apply p-4;
-}
-.box-x {
+.box-px {
   @apply px-4;
 }
-.box-y {
+.box-py {
   @apply py-4;
+}
+.box.space-x > * + * {
+  @apply ml-4;
+}
+.box.space-y > * + * {
+  @apply mt-4;
 }
 .modal {
   @apply h-full flex justify-center items-center;

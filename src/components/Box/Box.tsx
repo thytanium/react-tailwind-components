@@ -1,28 +1,42 @@
 import * as React from 'react';
+import * as classnames from 'classnames';
+import { Axis } from '../../types';
 
-enum BoxType {
-  X,
-  Y,
-  BOTH,
-}
-
-const boxMap: Record<BoxType, string> = {
-  [BoxType.X]: 'box-x',
-  [BoxType.Y]: 'box-y',
-  [BoxType.BOTH]: 'box',
+const paddingMap: Record<Axis, string> = {
+  [Axis.X]: 'box-px',
+  [Axis.Y]: 'box-py',
+  [Axis.BOTH]: 'box-px box-py',
 };
 
 interface BoxProps {
   children?: React.ReactNode;
-  type?: BoxType;
+  isHorizontallySpaced?: boolean;
+  isVerticallySpaced?: boolean;
+  padding?: Axis;
 }
 
-export default function Box({ children, type }: BoxProps): React.ReactElement {
-  return <div className={boxMap[type]}>{children}</div>;
+export default function Box({
+  children,
+  isHorizontallySpaced,
+  isVerticallySpaced,
+  padding,
+}: BoxProps): React.ReactElement {
+  return (
+    <div
+      className={classnames('box', paddingMap[padding], {
+        'space-x': isHorizontallySpaced,
+        'space-y': isVerticallySpaced,
+      })}
+    >
+      {children}
+    </div>
+  );
 }
 
 Box.defaultProps = {
-  type: BoxType.BOTH,
+  isHorizontallySpaced: false,
+  isVerticallySpaced: false,
+  padding: Axis.BOTH,
 };
 
-Box.type = BoxType;
+Box.padding = Axis;

@@ -8,7 +8,7 @@ export default function ButtonShowcase(): React.ReactElement {
     <div>
       <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
         <Container>
-          <Box type={Box.type.Y}>
+          <Box padding={Box.padding.Y}>
             <Text5Xl color={Text.color.WHITE} weight={Text.weight.BOLD}>
               Tailwind React Components
             </Text5Xl>
@@ -16,7 +16,7 @@ export default function ButtonShowcase(): React.ReactElement {
         </Container>
       </div>
       <Container>
-        <Box type={Box.type.Y}>
+        <Box isHorizontallySpaced padding={Box.padding.Y}>
           <Button>Default</Button>
           <Button variant={Button.variant.PRIMARY}>Primary</Button>
           <Button variant={Button.variant.LIGHT}>Light</Button>
@@ -25,7 +25,7 @@ export default function ButtonShowcase(): React.ReactElement {
           <Button variant={Button.variant.WARNING}>Warning</Button>
           <Button variant={Button.variant.DANGER}>Danger</Button>
         </Box>
-        <Box type={Box.type.Y}>
+        <Box isHorizontallySpaced padding={Box.padding.Y}>
           <Button isDisabled>Default</Button>
           <Button isDisabled variant={Button.variant.PRIMARY}>
             Primary
@@ -46,7 +46,7 @@ export default function ButtonShowcase(): React.ReactElement {
             Danger
           </Button>
         </Box>
-        <Box type={Box.type.Y}>
+        <Box isHorizontallySpaced padding={Box.padding.Y}>
           <Button leftComponent={Check}>
             <span>Default</span>
           </Button>

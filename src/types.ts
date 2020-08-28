@@ -27,3 +27,9 @@ export enum FontWeight {
 }
 
 export type ZIndex = 0 | 10 | 20 | 30 | 40 | 50;
+
+export enum Axis {
+  X,
+  Y,
+  BOTH,
+}
