@@ -1,4 +1,4 @@
-import { Variant, ZIndex, TextColor, FontWeight } from './types';
+import { Variant, ZIndex, TextColor, FontWeight, Flex } from './types';
 
 export const variantMap: Record<Variant, string> = {
   [Variant.PRIMARY]: 'is-primary',
@@ -35,4 +35,8 @@ export const zIndexMap: Record<ZIndex, string> = {
   30: 'z-30',
   40: 'z-40',
   50: 'z-50',
+};
+
+export const flexMap: Record<Flex, string> = {
+  [Flex.CENTER]: 'flex justify-center items-center',
 };

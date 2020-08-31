@@ -73,7 +73,7 @@
 }
 .overlay {
   @apply w-screen h-screen fixed left-0 top-0;
-  background-color: rgba(32, 32, 32, 0.7);
+  background-color: rgba(64, 64, 64, 0.7);
 }
 .box-px {
   @apply px-4;
@@ -87,11 +87,11 @@
 .box.space-y > * + * {
   @apply mt-4;
 }
-.modal {
-  @apply h-full flex justify-center items-center;
-}
 .modal-body {
   @apply bg-white shadow-lg;
+}
+.modal-header {
+  @apply bg-white;
 }
 
 @tailwind utilities;

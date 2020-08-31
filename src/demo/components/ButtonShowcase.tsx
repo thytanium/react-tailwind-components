@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Container, Text5Xl } from '../..';
+import { Box, Button, Container, Text4Xl, Text5Xl } from '../..';
 import Text from '../../components/Text/Text';
 import { Check, ChevronDown, Trash, Refresh } from './Icon';
 
@@ -16,6 +16,10 @@ export default function ButtonShowcase(): React.ReactElement {
         </Container>
       </div>
       <Container>
+        <Box padding={Box.padding.Y}>
+          <Text4Xl color={Text.color.DARK}>Button</Text4Xl>
+          <hr />
+        </Box>
         <Box isHorizontallySpaced padding={Box.padding.Y}>
           <Button>Default</Button>
           <Button variant={Button.variant.PRIMARY}>Primary</Button>

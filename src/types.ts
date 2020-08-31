@@ -33,3 +33,7 @@ export enum Axis {
   Y,
   BOTH,
 }
+
+export enum Flex {
+  CENTER,
+}
