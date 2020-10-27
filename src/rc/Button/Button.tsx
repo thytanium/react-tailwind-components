@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { SideProps, ChildrenProps } from '../types';
+import { BeforeAfterProps, ChildrenProps } from '../types';
 
-export interface ButtonProps extends SideProps, ChildrenProps {
+export interface ButtonProps extends BeforeAfterProps, ChildrenProps {
   className?: string;
   innerRef?: React.Ref<HTMLButtonElement>;
   isDisabled?: boolean;
@@ -14,11 +14,11 @@ export default function Button({
   className,
   innerRef,
   isDisabled,
-  leftComponent: LeftComponent,
-  leftNode,
+  beforeComponent: BeforeComponent,
+  beforeNode,
   onClick,
-  rightComponent: RightComponent,
-  rightNode,
+  afterComponent: AfterComponent,
+  afterNode,
   type,
 }: ButtonProps): React.ReactElement {
   return (
@@ -29,17 +29,15 @@ export default function Button({
       ref={innerRef}
       type={type}
     >
-      {LeftComponent ? <LeftComponent /> : leftNode}
+      {BeforeComponent ? <BeforeComponent /> : beforeNode}
       {children}
-      {RightComponent ? <RightComponent /> : rightNode}
+      {AfterComponent ? <AfterComponent /> : afterNode}
     </button>
   );
 }
 
 Button.defaultProps = {
   isDisabled: false,
-  onClick: (): void => {
-    // do nothing
-  },
+  onClick: undefined,
   type: 'button',
 };

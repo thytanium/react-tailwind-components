@@ -8,7 +8,7 @@ describe('Button', () => {
   it('renders a side component', () => {
     const SideComponent = (): React.ReactElement => <span>Side</span>;
     const { getByText } = render(
-      <Button leftComponent={SideComponent}>{buttonText}</Button>,
+      <Button beforeComponent={SideComponent}>{buttonText}</Button>,
     );
 
     expect(getByText('Side')).toBeInTheDocument();
@@ -16,7 +16,7 @@ describe('Button', () => {
 
   it('renders a side node', () => {
     const { getByText } = render(
-      <Button leftNode={<span>Side</span>}>{buttonText}</Button>,
+      <Button beforeNode={<span>Side</span>}>{buttonText}</Button>,
     );
 
     expect(getByText('Side')).toBeInTheDocument();

@@ -1,10 +1,10 @@
 import { ElementType, ReactNode } from 'react';
 
-export type SideProps = {
-  leftComponent?: ElementType;
-  leftNode?: ReactNode;
-  rightComponent?: ElementType;
-  rightNode?: ReactNode;
+export type BeforeAfterProps = {
+  beforeComponent?: ElementType;
+  beforeNode?: ReactNode;
+  afterComponent?: ElementType;
+  afterNode?: ReactNode;
 };
 
 export type ChildrenProps = {
