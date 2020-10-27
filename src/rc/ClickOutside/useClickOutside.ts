@@ -1,7 +1,7 @@
 import { createRef, Ref, useCallback, useEffect } from 'react';
 
 export default function useClickOutside<T extends HTMLElement>(
-  onClick: () => void
+  onClick: () => void,
 ): Ref<T> {
   const ref = createRef<T>();
 
@@ -11,7 +11,7 @@ export default function useClickOutside<T extends HTMLElement>(
         onClick();
       }
     },
-    [ref, onClick]
+    [ref, onClick],
   );
 
   useEffect(() => {

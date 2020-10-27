@@ -19,7 +19,7 @@ export default function Text({
       className={classnames(
         textColorMap[color],
         fontWeightMap[weight],
-        className
+        className,
       )}
     >
       {children}

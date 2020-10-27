@@ -23,14 +23,14 @@ export default function Overlay({
               className={classnames(
                 'overlay',
                 flexMap[flex],
-                zIndexMap[zIndex * 10]
+                zIndexMap[zIndex * 10],
               )}
             >
               {children}
             </div>,
-            document.body
+            document.body,
           ),
-        [children, flex]
+        [children, flex],
       )}
     </Stack>
   );

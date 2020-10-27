@@ -17,7 +17,7 @@ describe('ClickOutside component and hook', () => {
         ({ ref }): React.ReactElement => (
           <div ref={ref}>My Content</div>
         ),
-        []
+        [],
       )}
     </ClickOutside>
   );
@@ -30,7 +30,7 @@ describe('ClickOutside component and hook', () => {
       document.body,
       new MouseEvent('click', {
         bubbles: true,
-      })
+      }),
     );
 
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -43,7 +43,7 @@ describe('ClickOutside component and hook', () => {
       getByText('My Content'),
       new MouseEvent('click', {
         bubbles: true,
-      })
+      }),
     );
 
     expect(onClick).not.toHaveBeenCalled();

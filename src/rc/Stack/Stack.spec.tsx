@@ -12,7 +12,7 @@ describe('Stack component and context', () => {
             <Stack>{zIndex1 => <span>{`zIndex1 = ${zIndex1}`}</span>}</Stack>
           </>
         )}
-      </Stack>
+      </Stack>,
     );
 
     expect(getByText('zIndex0 = 1')).toBeInTheDocument();
@@ -21,7 +21,7 @@ describe('Stack component and context', () => {
 
   it('overrides z-index value with prop', () => {
     const { getByText } = render(
-      <Stack value={5}>{zIndex => `zIndex = ${zIndex}`}</Stack>
+      <Stack value={5}>{zIndex => `zIndex = ${zIndex}`}</Stack>,
     );
 
     expect(getByText('zIndex = 6')).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe('Stack component and context', () => {
     const { getByText } = render(
       <Stack value={5}>
         {() => <Stack value={1}>{zIndex => `zIndex = ${zIndex}`}</Stack>}
-      </Stack>
+      </Stack>,
     );
 
     expect(getByText('zIndex = 7')).toBeInTheDocument();
