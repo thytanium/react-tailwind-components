@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
     "jsx": "react",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "declaration": true,
-    "declarationDir": "./typings",
-    "sourceMap": true,
+    "outDir": "dist",
     "removeComments": true
   },
-  "exclude": ["src/**/*.spec.tsx", "jest.setup.ts"]
+  "include": ["src"],
+  "exclude": ["src/**/*.spec.tsx"]
 }

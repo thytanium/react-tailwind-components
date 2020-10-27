@@ -1,9 +1,9 @@
-import { ReactType, ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 
 export type SideProps = {
-  leftComponent?: ReactType;
+  leftComponent?: ElementType;
   leftNode?: ReactNode;
-  rightComponent?: ReactType;
+  rightComponent?: ElementType;
   rightNode?: ReactNode;
 };
 

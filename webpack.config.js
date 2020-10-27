@@ -22,6 +22,7 @@ module.exports = {
       },
     ],
   },
+  devtool: 'sourcemap',
   devServer: {
     contentBase: path.resolve(__dirname, 'src/demo/public'),
     inline: true,
